@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-13T23:27:03 IST" name="Suite" finished-at="2023-09-13T23:27:10 IST" duration-ms="6660">
+    <groups>
+    </groups>
+    <test started-at="2023-09-13T23:27:03 IST" name="Test" finished-at="2023-09-13T23:27:10 IST" duration-ms="6660">
+      <class name="restassured.apiautomation.GetApiTest">
+        <test-method signature="verifyGetApi()[pri:0, instance:restassured.apiautomation.GetApiTest@543588e6]" started-at="2023-09-13T23:27:08 IST" name="verifyGetApi" finished-at="2023-09-13T23:27:09 IST" duration-ms="741" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyGetApi -->
+      </class> <!-- restassured.apiautomation.GetApiTest -->
+      <class name="restassured.apiautomation.APIChaining">
+        <test-method signature="verifyPostApi()[pri:0, instance:restassured.apiautomation.APIChaining@35aea049]" started-at="2023-09-13T23:27:03 IST" name="verifyPostApi" finished-at="2023-09-13T23:27:07 IST" duration-ms="3736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPostApi -->
+        <test-method signature="verifyDelApi()[pri:0, instance:restassured.apiautomation.APIChaining@35aea049]" started-at="2023-09-13T23:27:07 IST" name="verifyDelApi" finished-at="2023-09-13T23:27:07 IST" depends-on-methods="restassured.apiautomation.APIChaining.verifyPostApi" duration-ms="472" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDelApi -->
+        <test-method signature="verifyPutApi()[pri:0, instance:restassured.apiautomation.APIChaining@35aea049]" started-at="2023-09-13T23:27:08 IST" name="verifyPutApi" finished-at="2023-09-13T23:27:08 IST" depends-on-methods="restassured.apiautomation.APIChaining.verifyPostApi" duration-ms="600" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPutApi -->
+      </class> <!-- restassured.apiautomation.APIChaining -->
+      <class name="restassured.apiautomation.PutApiTest">
+        <test-method signature="verifyPutApi()[pri:0, instance:restassured.apiautomation.PutApiTest@f5acb9d]" started-at="2023-09-13T23:27:09 IST" name="verifyPutApi" finished-at="2023-09-13T23:27:09 IST" duration-ms="465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPutApi -->
+      </class> <!-- restassured.apiautomation.PutApiTest -->
+      <class name="restassured.apiautomation.PostApiTest">
+        <test-method signature="verifyPostApi()[pri:0, instance:restassured.apiautomation.PostApiTest@4fb3ee4e]" started-at="2023-09-13T23:27:09 IST" name="verifyPostApi" finished-at="2023-09-13T23:27:10 IST" duration-ms="528" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPostApi -->
+      </class> <!-- restassured.apiautomation.PostApiTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
