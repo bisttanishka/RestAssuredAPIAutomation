@@ -5,16 +5,27 @@ import static org.hamcrest.Matchers.matchesPattern;
 
 import org.testng.annotations.Test;
 
+import com.google.gson.Gson;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class APIChaining {
-
+public class APIChainingwithPojo {
+	UserDataPojo datapojo=new UserDataPojo();
+	
+	
 String userId;	
 	@Test
 	public void verifyPostApi() {
+		//Now setting the value of the pojo class first we will set the value
+		datapojo.setName("Rajesh");
+		datapojo.setJob("QA");
+		// Convert the POJO to JSON using Gson
+		Gson gson = new Gson();
+		String jsonBody = gson.toJson(datapojo);
+	
         RestAssured.baseURI = "https://reqres.in";
-        Response response = given().body(UserData.getUserData()).when().post("/api/users/").then().statusLine("HTTP/1.1 201 Created").statusCode(201)
+        Response response = given().body(jsonBody).when().post("/api/users/").then().statusCode(201)
                 
         		.body("createdAt", matchesPattern("\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z"))
                 .extract().response();

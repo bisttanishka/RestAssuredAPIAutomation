@@ -6,6 +6,7 @@
       <class name="restassured.apiautomation.APIChaining">
         <methods>
           <include name="verifyPostApi"/>
+          <include name="verifyPutApi"/>
           <include name="verifyDelApi"/>
         </methods>
       </class> <!-- restassured.apiautomation.APIChaining -->

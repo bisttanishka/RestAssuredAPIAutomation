@@ -14,7 +14,7 @@ public class GetApiTest {
     @Test
     public void verifyGetApi() {
         RestAssured.baseURI = "https://reqres.in";
-        Response response = given().queryParam("page", "2").when().get("/api/users/").then().statusCode(200)
+        Response response = given().log().all().queryParam("page", "2").when().get("/api/users/").then().log().all().statusCode(200)
                 .body("total", equalTo(12))
                 .body("data.size()", equalTo(6))
                 .body("data[5].email", equalTo("rachel.howell@reqres.in"))
